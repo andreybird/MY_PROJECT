@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}
+All plots
+{% endblock %}
+
+{% block body %}
+<div class="container pricing-header p-3 pb-md-4 mx-auto">
+    <h1 class="display-4 fw-normal">All the plots</h1>
+    <p class="fs-5 text-muted">You can easily access all the plots here.</p>
+</div>
+<main>
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-3 row-cols-md-2 g-2">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="static/imiges/MedianAgeCovidSmal.png" align=”middle”>
+                        <div class="card-body">
+                            <p class="card-text">Scatter plot: Age and Covid deaths</p>
+                            <a class="me-3 py-2 text-dark text-decoration-none"
+                               href="/MedianAgeCovidSmallPlot">/Open/</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="static/imiges/MedianAgeCovidBig.png" align=”middle”>
+                        <div class="card-body">
+                            <p class="card-text">Scatter plot: Age and Covid deaths with additoin of population</p>
+                            <a class="me-3 py-2 text-dark text-decoration-none"
+                               href="/MedianAgeCovidBigPlot">/Open/</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="static/imiges/GiniCovid.png" align=”middle”>
+                        <div class="card-body">
+                            <p class="card-text">Scatter plot: Gini coefficien and Covid deaths</p>
+                            <a class="me-3 py-2 text-dark text-decoration-none"
+                               href="/GiniCovid">/Open/</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="static/imiges/IndexCovid.png" align=”middle”>
+                        <div class="card-body">
+                            <p class="card-text">Scatter plot: Index of trust and Covid deaths</p>
+                            <a class="me-3 py-2 text-dark text-decoration-none"
+                               href="/IndexCovid">/Open/</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="static/imiges/MedianAgeGini.png" align=”middle”>
+                        <div class="card-body">
+                            <p class="card-text">Scatter plot: Gini coefficien and Age</p>
+                            <a class="me-3 py-2 text-dark text-decoration-none"
+                               href="/GiniAge">/Open/</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

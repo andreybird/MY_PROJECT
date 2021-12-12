@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Main page
+{% endblock %}
+
+{% block body %}
+<div class="container pricing-header p-3 pb-md-4 mx-auto">
+    <h1 class="display-4 fw-normal">So, this is my research...</h1>
+    <p class="fs-5 text-muted">I’m going to examine the World statistic dataset looking criterias which affect
+        statistics of COVID related deaths. In my research I hope to pin-point exact metrics and prove the assumptions
+        I already have. In addition I will look into any correlations which I find interesting during my research. </p>
+    <p class="fs-5 text-muted">After processing the data I drew a Heatmap of correlations in
+        order to find metrics which affect Covid cases the most.</p>
+</div>
+<main>
+    <div class="container">
+        <img src="static/imiges/HeatMap.png" align=”middle”>
+        <p class="fs-5 text-muted">Now we will look closer into specific metrics such as Median age,
+            Gini coefficient and more.</p>
+        <p class="fs-5 text-muted">PS: You can examine my scatter plots closer if you go to “Scatter plots” section.</p>
+    </div>
+    <div class="container">
+        <img src="static/imiges/MedianAgeCovidSmal.png" align=”middle”>
+        <p class="fs-5 text-muted">So, I decided to start with median age, this was always my assumption and heatmap
+            results support it.</p>
+        <p class="fs-5 text-muted">I’ll redo this scatter plot, but with a small modification this time:
+            I’ll add populations into the mix just to prove my other theory (about it later).</p>
+    </div>
+    <div class="container">
+        <img src="static/imiges/MedianAgeCovidBig.png" align=”middle”>
+        <p class="fs-5 text-muted">Let’s move on to Gini coefficient</p>
+    </div>
+    <div class="container">
+        <img src="static/imiges/GiniCovid.png" align=”middle”>
+        <p class="fs-5 text-muted">This is a bit strange, but we can probably attribute this to the lower
+            population density in countries with higher Gini coefficient.</p>
+        <p class="fs-5 text-muted">The last one is Index of institutional trust.</p>
+    </div>
+    <div class="container">
+        <img src="static/imiges/IndexCovid.png" align=”middle”>
+        <p class="fs-5 text-muted">Interestingly enough, looking back on the heatmap, we can see a strong correlation
+            between median age and Gini coefficient, so I’ll look closer at them.</p>
+    </div>
+    <div class="container">
+        <img src="static/imiges/MedianAgeGini.png" align=”middle”>
+        <p class="fs-5 text-muted">My guess is that countries with better distribution of wealth provide
+            better living standards for its citizens.</p>
+    </div>
+    <div class="container">
+        <h1>Conclusion</h1>
+        <p class="fs-5 text-muted">To sum things up:</p>
+        <p class="fs-5 text-muted"> In my research I wanted to pin-point metrics which contributed to Covid-19 related
+            deaths the most. Obviously it is
+            not that big, but we can still see reasonable results. My first assumption was that the main contributors
+            would be:</p>
+        <p class="fs-5 text-muted">*Median age (older people are more affected by Covid-19 then younger desidents)</p>
+        <p class="fs-5 text-muted">*Index of institutional trust (people refusing vaccines and ignoring mandates due to
+            the untrustworthiness of their government)</p>
+        <p class="fs-5 text-muted">*GiniCoefficient (poorer places are more likely lack basic protection against the
+            virus)</p>
+        <p class="fs-5 text-muted">*Unfortunately, this dataset lacks one of the parameters I was interested in -
+            population density. Nonetheless we
+            can assume that it’s true looking at the chart with populations. There are only 2 countries that break the
+            mold: China and Belgium.</p>
+        <p class="fs-5 text-muted">In the end I’ve proven all of my theories except the 3rd one. But I believe that
+            it’s mostly attributed to lesser population density for “uneven” countries. Additionally I
+            found an interesting connection between Median age and Gini coefficient (supposingly older
+            populations have more distributed wealth.</p>
+        <div>
+</main>
+{% endblock %}
